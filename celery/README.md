@@ -9,3 +9,8 @@ docker run -itd --name redis_celery -p 6379:6379 redis:alpine
 ```
 Error response from daemon: driver failed programming external connectivity on endpoint redis_celery (eae1509c7c52eeb5f55f1831c5c64a2ea3a601b3bd5be52b33a93a252275e156): Error starting userland proxy: mkdir /port/tcp:0.0.0.0:6379:tcp:172.17.0.2:6379: input/output error.
 ```
+
+## 启动Celery Worker
+```
+celery worker -A task -l info
+```

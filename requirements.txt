@@ -6,3 +6,4 @@ grpcio-tools
 googleapis-common-protos
 redis
 flask
+celery
