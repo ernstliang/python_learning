@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package test_grpc;
+
+service TestGrpc {
+    rpc TestHello(TestRequest) returns (TestResponse){}
+    rpc Add(AddRequest) returns (AddResponse){}
+}
+
+message TestRequest {
+    string data = 1;
+}
+
+message TestResponse {
+    int32 code = 1;
+    string msg = 2;
+}
+
+message AddRequest {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message AddResponse {
+    int32 code = 1;
+    int32 result = 2;
+}
